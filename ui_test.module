@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Main code of the module.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function ui_test_menu() {
+  $items = array();
+
+  $items['ui_test'] = array(
+    'page callback' => 'ui_test_page_callback',
+  );
+
+  return $items;
+}
+
+/**
+ * Callback for testing page.
+ */
+function ui_test_page_callback() {
+  $html = '';
+  // Plain HTML.
+  $html .= theme('ui_test_page');
+  // @TODO form API
+  return $html;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function ui_test_theme($existing, $type, $theme, $path) {
+  return array(
+    'ui_test_page' => array(
+      'template' => 'ui-test-page',
+      'path' => drupal_get_path('module', 'ui_test') . '/theme',
+    ),
+  );
+}
