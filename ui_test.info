@@ -1,3 +1,4 @@
 name = UI test
 description = Testing UI of themes.
+core = 7.x
 version = 7.x-1.x

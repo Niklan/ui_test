@@ -13,6 +13,7 @@ function ui_test_menu() {
 
   $items['ui_test'] = array(
     'page callback' => 'ui_test_page_callback',
+    'access callback' => TRUE,
   );
 
   return $items;
@@ -22,6 +23,7 @@ function ui_test_menu() {
  * Callback for testing page.
  */
 function ui_test_page_callback() {
+  drupal_add_css(drupal_get_path('module', 'ui_test') . '/css/ui_test.css');
   $html = '';
   // Plain HTML.
   $html .= theme('ui_test_page');

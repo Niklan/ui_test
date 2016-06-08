@@ -1,0 +1,18 @@
+.example {
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  padding: 40px 10px 10px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.example:before {
+  display: block;
+  content: 'Example';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
